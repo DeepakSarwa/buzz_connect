@@ -1,7 +1,7 @@
 let countryField = document.getElementById('countryCode');
 (async function getCountry(){
   let html=''
-  const data = await fetch('http://localhost:3000/country').then(res=>res.json())
+  const data = await fetch('./db.json').then(res=>res.json())
   console.log('data',data);
   data.forEach(element => {
      html+= `<option>+${element.code} ${element.country}</option>`;
